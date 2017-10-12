@@ -66,8 +66,9 @@ namespace bsim {
     dynamic_bit_vector(const dynamic_bit_vector& other) {
       bits.resize(other.bits.size());
       N = other.bitLength();
-      for (int i = 0; i < NUM_BYTES(N); i++) {
-	bits[i] = other.bits[i];
+
+      for (int i = 0; i < other.bits.size(); i++) {
+        set(i, other.get(i));
       }
     }
 
