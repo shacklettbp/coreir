@@ -6,6 +6,7 @@ using namespace CoreIR;
 
 string type2magma(Context* c,Type* t) {
   if (auto rt = dyn_cast<RecordType>(t)) {
+    (void)rt;
     ASSERT(0,"NYI");   
     //vector<string> sels;
     //if (!rt->isMixed()) {
