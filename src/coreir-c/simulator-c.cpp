@@ -103,6 +103,11 @@ extern "C" {
     state->setValue(path, bv);
   }
 
+  void CORESimRunHalfCycle(CORESimulatorState* cstate) {
+    SimulatorState* state = rcast<SimulatorState*>(cstate);
+    state->runHalfCycle();
+  }
+
   void CORESimStepMainClock(CORESimulatorState* cstate) {
     SimulatorState* state = rcast<SimulatorState*>(cstate);
     state->stepMainClock();
