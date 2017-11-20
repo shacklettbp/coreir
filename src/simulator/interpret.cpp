@@ -1595,6 +1595,12 @@ namespace CoreIR {
     // assert(false);
   }
 
+  string
+  SimulatorState::getOriginalName(const std::vector<std::string>& instanceList,
+                                  const std::vector<std::string>& portSelectList) {
+    string name = reconstructName(instanceList, portSelectList);
+  }
+
   void
   SimulatorState::setWatchPointByOriginalName(const std::vector<std::string>& instanceList,
                                               const std::vector<std::string>& portSelectList,
